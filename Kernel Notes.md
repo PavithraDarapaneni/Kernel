@@ -1,4 +1,4 @@
-OPerating System :
+``OPerating System :
 Bring up all the devices and provide a human interface.
 
 Types : 1.Genaral Purpose -> windows,Linux(not time bound,no priority) 2.Real time -> RT Linux, FreeRTOS, VXWorks(Time bound based on priority)
