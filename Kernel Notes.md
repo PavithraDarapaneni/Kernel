@@ -1,28 +1,25 @@
-``OPerating System :
+## OPerating System :
 Bring up all the devices and provide a human interface.
 
 Types : 1.Genaral Purpose -> windows,Linux(not time bound,no priority) 2.Real time -> RT Linux, FreeRTOS, VXWorks(Time bound based on priority)
-Sheduler :
-Schedules the next task to be executed.
+Sheduler :Schedules the next task to be executed.
 
 Types :
-1.Round Robin :
-All tasks get equal amount of time to execute. scheduler maintains all the tasks in a linked list. Each node in the linked list get equal amount of time to execute.
+1.Round Robin :All tasks get equal amount of time to execute. scheduler maintains all the tasks in a linked list. Each node in the linked list get equal amount of time to execute.
 
 Advantages : Every task will get time to executed.
 
 Disadvantage : No priority will given to any task in round robin.
 
-2.Pre-emptive Priority Based Scheduler :
-Higher priority task executes first.
+2.Pre-emptive Priority Based Scheduler :Higher priority task executes first.
 
 Disadvantage : There is a posibility of low priority task may get delayed or isolated untill the high priority tasks gets executed.
 
-Booting Process :
-CPU have a defined address to start the execution form. First address - 1st stage of boot loader(BIOS). purpose of 1st stage boot loader : Basic system configuration. Address -> Next stage of booting process. The next stage after the first loader booting process may be 2nd stage boot loader/OS.
+Booting Process :CPU have a defined address to start the execution form. First address - 1st stage of boot loader(BIOS). purpose of 1st stage boot loader : Basic system configuration. Address -> Next stage of booting process. The next stage after the first loader booting process may be 2nd stage boot loader/OS.
 
-What is the purpose of 2nd stage boot loader ? 1.Choice of os if multiple os are installed 2nd stage boot loader is optional and it comes when it requires. 2.Select boot mode : Normal /safe mode/ command prompt mode
-second stage bootloader is optional.
+## What is the purpose of 2nd stage boot loader ?
+1.Choice of os if multiple os are installed 2nd stage boot loader is optional and it comes when it requires.
+2.Select boot mode : Normal /safe mode/ command prompt mode second stage bootloader is optional.
 
 Examples of 2nd stage boot loader : Windows boot,Linux GRUB,U-Boot.
 
@@ -47,7 +44,7 @@ display.c Inc :
 
 display.h
 
-Find all the files with .c and its extension SRC = $(shell find -name '*.c)
+## Find all the files with .c and its extension SRC = $(shell find -name '*.c)
 
 To execute shell command from make file use shell command.
 
@@ -119,7 +116,7 @@ Cmake scans the contents of CMakeLists.txt to generate Makefile based on the sou
 
 Libraries name always start with lib.
 
-If we have sorce code,how to generate sorce code?
+## If we have sorce code,how to generate sorce code?
 main.c display.c display.c
 
 gcc main.c display.c
@@ -298,11 +295,12 @@ Above command is used to set the cross compilation path.
 
 To remove cmake file rm -rf *
 
-Steps for cross compilation :
+## Steps for cross compilation :
 1.create cmake-toolchain.cmake in top-level directory.
 2.set the path of the compiler set(CC_TOOL_PATH /home/username/ti-preprocessor-sdk-linux-arm5-xx -evm-08_02_01_00/linux-devkit/sysroots/x86-64-argo-linux) path present in ti-processor-sdk-linux-am57xx-evm_08_02_01_00/linux-devkit/sysroots/x86_64_argo -linux/usr/bin set(CMAKE_C_COMPILER ${CC_TOOL_PATH}/usr/bin/arm-none-linux-gnueabihf-gcc)
 3.Goto build directory username/build_math $ cmake -DCMAKE_TOOLCHAIN_FILE=../project_math/cmake-toolchain.cmake. cmake takes the instruction from cmake-toolchain.cmake before starting build. Executable mainapp present in the Bin directory.
-Linux :
+
+## Linux :
 Linux Subsystems :
 Process management
 Memory management
